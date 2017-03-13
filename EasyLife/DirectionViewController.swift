@@ -290,7 +290,7 @@ class DirectionViewController: UIViewController, UITabBarDelegate{
             if fromScheduleVC == true {
                 confirmButton.addTarget(self, action: #selector(self.sendDataToSchedule), for: UIControlEvents.touchUpInside)
             } else {
-                print("click")
+                confirmButton.addTarget(self, action: #selector(self.createSchedule), for: UIControlEvents.touchUpInside)
             }
             
             DispatchQueue.main.async {
@@ -340,6 +340,38 @@ class DirectionViewController: UIViewController, UITabBarDelegate{
                 presentingViewController?.dismiss(animated: false, completion: nil)
             }
         }
+    }
+    
+    
+    // create a new schedule
+    func createSchedule() {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HaveMap") as! AddSchedule
+        
+        // source location
+        let sourceLatitude = self.coordinateDegreeString(degree: "\(sourceCoordinate?.latitude)")
+        let sourceLongitude = self.coordinateDegreeString(degree: "\(sourceCoordinate?.longitude)")
+        
+        // destination
+        let destLatitude = self.coordinateDegreeString(degree: "\(destCoordinate?.latitude)")
+        let destLongitude = self.coordinateDegreeString(degree: "\(destCoordinate?.longitude)")
+        
+        
+        
+        vc.sourceLatitude = sourceLatitude
+        vc.sourceLongitude = sourceLongitude
+        vc.destLatitude = destLatitude
+        vc.destLongitude = destLongitude
+        vc.sourceName = self.sourceLabel.text!
+        vc.destName = self.destLabel.text!
+        vc.expectedTime = selectedRoute.time
+        vc.initSource = vc.sourceName
+        vc.initDest = vc.destName
+        
+        vc.point_begin = "lat=\(sourceLatitude)&lon=\(sourceLongitude)"
+        vc.point_end = "lat=\(sourceLatitude)&lon=\(sourceLongitude)"
+
+        
+        self.present(vc, animated: true, completion: nil)
     }
 }
 

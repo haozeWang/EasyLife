@@ -43,6 +43,9 @@ class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPi
     var point_begin = ""
     var point_end = ""
     
+    var initSource: String? = nil
+    var initDest: String? = nil
+    
     var flag = 1
     var changeflag = 1
     var day : [String] = []
@@ -75,6 +78,13 @@ class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPi
         let myGesture = UITapGestureRecognizer(target: self, action:#selector(self.tappedAwayFunction(sender:)) )
         self.view.addGestureRecognizer(myGesture)
         // Do any additional setup after loading the view.
+        
+        if initSource != nil {
+            self.begin_point.text = initSource
+        }
+        if initDest != nil {
+            self.end_point.text = initDest
+        }
     }
     
     func tappedAwayFunction(sender: UITapGestureRecognizer){
