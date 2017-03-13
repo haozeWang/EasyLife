@@ -186,8 +186,8 @@ class AddTask: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPicker
         center.getNotificationSettings(completionHandler: {(settings) in
             if settings.authorizationStatus == .authorized {
                 let content = UNMutableNotificationContent()
-                content.title = self.temp_field
-                let description = String(self.temp_view)!
+                content.title = sche.title
+                let description = String(sche.desc)!
                 
                 let dateformatter = DateFormatter()
                 dateformatter.dateFormat = "MMM dd, EEE HH:mm"
