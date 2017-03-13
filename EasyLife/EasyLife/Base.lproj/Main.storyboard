@@ -1463,7 +1463,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOJ-EO-JRx">
                                 <rect key="frame" x="300" y="340" width="59" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Set time"/>
+                                <state key="normal" title="Set time">
+                                    <color key="titleColor" red="0.99116492146596857" green="0.99116492146596857" blue="0.99116492146596857" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="SetBeginTime:" destination="Ze7-IZ-eYT" eventType="touchUpInside" id="SQn-Kt-thk"/>
                                 </connections>
@@ -1535,7 +1537,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZq-KC-IUj">
                                 <rect key="frame" x="300" y="419" width="59" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Set time"/>
+                                <state key="normal" title="Set time">
+                                    <color key="titleColor" red="0.99116492146596857" green="0.99116492146596857" blue="0.99116492146596857" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="SetRemTime:" destination="Ze7-IZ-eYT" eventType="touchUpInside" id="sTS-IV-3KU"/>
                                 </connections>
