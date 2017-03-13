@@ -71,7 +71,7 @@ class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPi
         Minute.text = "00"
         show_hour.text = "00:"
         show_minute.text = "00"
-        Remhours.text = "00"
+        Remhours.text = "00:"
         RemMinute.text = "00"
         record_date_begin = Date()
         record_date_end = Date()
@@ -183,6 +183,8 @@ class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPi
         temp.title = UITextLabel.text
         let begin = "\(createstringfromdate(date: record_date_begin)) \(hours.text! as String)\(Minute.text! as String)"
         let end = "\(createstringfromdate(date: record_date_end)) \(Remhours.text! as String)\(RemMinute.text! as String)"
+       
+    
         temp.fin_time = getdatefromstring(string: begin) as NSDate?
         temp.ram_time = getdatefromstring(string: end) as NSDate?
         temp.date = getstringfromdate_yy(date: temp.fin_time as! Date)
