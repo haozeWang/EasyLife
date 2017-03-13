@@ -10,8 +10,7 @@ import UIKit
 
 class ScheduleDetail: UIViewController {
 
-    @IBOutlet weak var weather_end: UILabel!
-    @IBOutlet weak var weather_begin: UILabel!
+
     
     @IBOutlet weak var information: UILabel!
     @IBOutlet weak var image_end: UIImageView!
@@ -87,12 +86,12 @@ class ScheduleDetail: UIViewController {
                         let city = responsedate["name"] as! String
                         if(flag == 1){
                             self.date_begin = Weather(city: city, country: country, weather: weather_date, temperature: temperature, image: code)
-                            self.weather_begin.text = self.date_begin.weather
+                            
                             self.image_begin.image = self.getimage(url: "http://openweathermap.org/img/w/\(code).png")
                         }
                         else{
                             self.date_end = Weather(city: city, country: country, weather: weather_date, temperature: temperature, image: code)
-                            self.weather_end.text = self.date_end.weather
+                            
                             self.image_end.image = self.getimage(url: "http://openweathermap.org/img/w/\(code).png")
                             
                         }

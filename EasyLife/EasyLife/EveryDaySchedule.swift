@@ -50,9 +50,10 @@ class EveryDaySchedule: UITableViewController,UIActionSheetDelegate, UpdateViewP
         
         // Get Cell Label
         let indexPath = tableView.indexPathForSelectedRow!
-        let currentCell = tableView.cellForRow(at: indexPath)! as! EveryDayScheduleCell
-        let controller = storyboard?.instantiateViewController(withIdentifier: "scheduledetail") as! ScheduleDetail
+        
         let object = task[indexPath.row]
+        if(object.begin != " "){
+        let controller = storyboard?.instantiateViewController(withIdentifier: "scheduledetail") as! ScheduleDetail
         controller.point_begin = object.point_begin
         controller.point_begin = object.point_end
         controller.location_begin = object.begin
@@ -60,7 +61,13 @@ class EveryDaySchedule: UITableViewController,UIActionSheetDelegate, UpdateViewP
         print(object.title)
         controller.task = object
         navigationController?.pushViewController(controller, animated: true)
-        
+        }
+        else{
+            let controller = storyboard?.instantiateViewController(withIdentifier: "taskdetail") as! TaskDetail
+            controller.task = object
+            navigationController?.pushViewController(controller, animated: true)
+
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
