@@ -348,7 +348,8 @@ class DirectionViewController: UIViewController, UITabBarDelegate{
                                                                 sourceName: self.sourceLabel.text!,
                                                                 destName: self.destLabel.text!,
                                                                 expectedTime: selectedRoute.time,
-                                                                expTimeString: self.timeText)
+                                                                expTimeString: self.timeText,
+                                                                travelMode: self.currentTravelMode)
             let presentingViewController = self.presentingViewController
             self.dismiss(animated: true) {
                 presentingViewController?.dismiss(animated: false, completion: nil)
@@ -381,6 +382,7 @@ class DirectionViewController: UIViewController, UITabBarDelegate{
         vc.initSource = vc.sourceName
         vc.initDest = vc.destName
         vc.expTimeString = self.timeText
+        vc.travelMode = self.currentTravelMode
         
         vc.point_begin = "lat=\(sourceLatitude)&lon=\(sourceLongitude)"
         vc.point_end = "lat=\(sourceLatitude)&lon=\(sourceLongitude)"
