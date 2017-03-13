@@ -123,20 +123,20 @@ class ScheduleDetail: UIViewController {
                                 let weather_clear = wea[0] as AnyObject
                                 let weather_date = weather_clear["description"] as! String
                                 if weather_date == "snow"{
-                                self.information.text = "During your trip phase，would be snowing. Be careful"
+                                self.information.text = "Attention: It will be snowy during your trip!"
                                 return
 
                                 }
                                 else if weather_date == "rain" {
-                                self.information.text = "During your trip phase，would be raining. Be careful"
+                                self.information.text = "Attention: It will be raining during your trip!"
                                 return
                                 }
                                 else if weather_date == "thunderstorm"{
-                                self.information.text = "During your trip phase，would have thunderstorm. Be careful"
+                                self.information.text = "Attention: It will have thunderstorm during your trip!"
                                     return
                                 }
                                 else if weather_date == "shower rain" {
-                                self.information.text = "During your trip phase，would have shower rain. Be careful"
+                                self.information.text = "Attention: It will have shower rain during your trip!"
                                 return
                                 }
                             }
@@ -146,17 +146,20 @@ class ScheduleDetail: UIViewController {
                              self.information.text = "Nice weather "
                         }
                         else{
-                            
-                            if self.date_end.weather == "rain" {
-                                self.information.text = "During your trip phase，would be raining. Be careful"
+                            if self.date_end.weather == "snow"{
+                                self.information.text = "Attention: It will be snowy during your trip!"
+                                return
+                            }
+                            else if self.date_end.weather == "rain" {
+                                self.information.text = "Attention: It will be raining during your trip!"
                                 return
                             }
                             else if self.date_end.weather == "thunderstorm"{
-                                self.information.text = "During your trip phase，would have thunderstorm. Be careful"
+                                self.information.text = "Attention: It will have thunderstorm during your trip!"
                                 return
                             }
                             else if self.date_end.weather == "shower rain" {
-                                self.information.text = "During your trip phase，would have shower rain. Be careful"
+                                self.information.text = "Attention: It will have shower rain during your trip!"
                                 return
                             }
 
