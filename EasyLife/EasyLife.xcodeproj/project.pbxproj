@@ -38,9 +38,9 @@
 		B1B089631E6FBF900089ABB0 /* EasyLifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B089621E6FBF900089ABB0 /* EasyLifeTests.swift */; };
 		B1B39E721E766064005198B2 /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B39E701E766064005198B2 /* Task+CoreDataClass.swift */; };
 		B1B39E731E766064005198B2 /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B39E711E766064005198B2 /* Task+CoreDataProperties.swift */; };
-		B1B39E751E7677F2005198B2 /* schedule.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B1B39E741E7677F2005198B2 /* schedule.jpeg */; };
 		B1B39E771E769E4F005198B2 /* TaskDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B39E761E769E4F005198B2 /* TaskDetail.swift */; };
 		B1B39E791E76A7E2005198B2 /* taskdetail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B1B39E781E76A7E2005198B2 /* taskdetail.jpg */; };
+		B1B6F54B1E77268B00255C2C /* Schedule.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B1B6F54A1E77268B00255C2C /* Schedule.jpeg */; };
 		B1E866661E731E8900ED5F09 /* weatherforecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E866651E731E8900ED5F09 /* weatherforecast.swift */; };
 		B1E866681E73213000ED5F09 /* weatherforecastcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E866671E73213000ED5F09 /* weatherforecastcell.swift */; };
 		B1E8666A1E73517700ED5F09 /* weatherforecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E866691E73517700ED5F09 /* weatherforecastTableViewCell.swift */; };
@@ -101,9 +101,9 @@
 		B1B089641E6FBF900089ABB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1B39E701E766064005198B2 /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B1B39E711E766064005198B2 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		B1B39E741E7677F2005198B2 /* schedule.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = schedule.jpeg; sourceTree = "<group>"; };
 		B1B39E761E769E4F005198B2 /* TaskDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetail.swift; sourceTree = "<group>"; };
 		B1B39E781E76A7E2005198B2 /* taskdetail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = taskdetail.jpg; sourceTree = "<group>"; };
+		B1B6F54A1E77268B00255C2C /* Schedule.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Schedule.jpeg; sourceTree = "<group>"; };
 		B1E866651E731E8900ED5F09 /* weatherforecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = weatherforecast.swift; sourceTree = "<group>"; };
 		B1E866671E73213000ED5F09 /* weatherforecastcell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = weatherforecastcell.swift; sourceTree = "<group>"; };
 		B1E866691E73517700ED5F09 /* weatherforecastTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = weatherforecastTableViewCell.swift; sourceTree = "<group>"; };
@@ -162,8 +162,8 @@
 				B19C97B11E70FA9E000CD117 /* EasyLife-Bridging-Header.h */,
 				B13AF98B1E70BEE7001EB206 /* CalenderCell.swift */,
 				B116CD681E74EA1F00508FEC /* DataController.swift */,
+				B1B6F54A1E77268B00255C2C /* Schedule.jpeg */,
 				B1B0894D1E6FBF900089ABB0 /* AppDelegate.swift */,
-				B1B39E741E7677F2005198B2 /* schedule.jpeg */,
 				B13AF9811E70AB90001EB206 /* CalanderViewController.swift */,
 				B19709AA1E728BC6002841BF /* 003.jpg */,
 				B1B0894F1E6FBF900089ABB0 /* ViewController.swift */,
@@ -309,8 +309,8 @@
 				B19709AB1E728BC6002841BF /* 003.jpg in Resources */,
 				B1E866711E736A1100ED5F09 /* 3.jpg in Resources */,
 				A9B455061E752FE700F0C71D /* Main.storyboard in Resources */,
+				B1B6F54B1E77268B00255C2C /* Schedule.jpeg in Resources */,
 				B1E8666C1E736A0900ED5F09 /* 1.jpg in Resources */,
-				B1B39E751E7677F2005198B2 /* schedule.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
