@@ -22,6 +22,9 @@ class TaskDetail: UIViewController {
     var point_begin : String!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "taskdetail.jpg")
+        self.view.insertSubview(backgroundImage, at: 0)
         if(task.point_begin == " "){
             moreweather.isHidden = true
             Rem_time.text = getstringfromdate(date: task.ram_time as Date)

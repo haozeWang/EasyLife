@@ -177,6 +177,11 @@ class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPi
             alert.addAction(UIAlertAction(title: "Ok,I know", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
+        else if(point_begin == "" || point_end == ""){
+            let alert = UIAlertController(title: "Error",message:"Please set Location", preferredStyle:UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok,I know", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
         else{
         let moc = DataController().managedObjectContext
         let temp = Task.init(entity: NSEntityDescription.entity(forEntityName: "Task", in:moc)!, insertInto: moc)
