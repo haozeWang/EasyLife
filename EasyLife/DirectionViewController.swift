@@ -270,7 +270,7 @@ class DirectionViewController: UIViewController, UITabBarDelegate{
             guard let timeText = duration["text"] as? String,
                 let timeValue = duration["value"] as? Int else { return}
             self.timeText = timeText
-            let timeLabel = UILabel(frame: CGRect(x: 20 + 375 * i, y: 0, width: 200, height: 35))
+            let timeLabel = UILabel(frame: CGRect(x: 20 + 375 * i, y: 0, width: 270, height: 35))
             timeLabel.text = "Time: \(timeText)"
             timeLabel.backgroundColor = UIColor.clear
             timeLabel.textColor = UIColor.white
@@ -281,7 +281,7 @@ class DirectionViewController: UIViewController, UITabBarDelegate{
             guard let distance = leg["distance"] as? [String: AnyObject] else { return}
             guard let distanceText = distance["text"] as? String,
                 let distanceValue = distance["value"] as? Int   else { return}
-            let distanceLabel = UILabel(frame: CGRect(x: 20 + 375 * i, y: 30, width: 200, height: 35))
+            let distanceLabel = UILabel(frame: CGRect(x: 20 + 375 * i, y: 30, width: 270, height: 35))
             distanceLabel.text = "Distance: \(distanceText)"
             distanceLabel.backgroundColor = UIColor.clear
             distanceLabel.textColor = UIColor.orange
