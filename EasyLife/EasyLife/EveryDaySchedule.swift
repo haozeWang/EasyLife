@@ -11,6 +11,7 @@ import CoreData
 import  UserNotifications
 class EveryDaySchedule: UITableViewController,UIActionSheetDelegate, UpdateViewProtocol {
     
+    
     var task: [schedule]!
     var date : String!
     override func viewDidLoad() {
@@ -80,6 +81,7 @@ class EveryDaySchedule: UITableViewController,UIActionSheetDelegate, UpdateViewP
             let issue = task[indexPath.row]
             cell.title.text = issue.title
             cell.fin_time.text = createstringfromdate(date: issue.fin_time as Date)
+            cell.descLabel.text = issue.desc
             return cell
     }
     /*

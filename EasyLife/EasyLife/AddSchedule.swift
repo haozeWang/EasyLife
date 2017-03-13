@@ -11,6 +11,9 @@ import CoreData
 import UserNotifications
 class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate{
     
+    
+    @IBOutlet weak var RouteWay: UILabel!
+    @IBOutlet weak var exp_timeLabel: UILabel!
     @IBOutlet weak var end_point: UILabel!
     @IBOutlet weak var begin_point: UILabel!
     @IBOutlet weak var SetRemTime: UIButton!
@@ -42,7 +45,7 @@ class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPi
     var expectedTime = 0
     var point_begin = ""
     var point_end = ""
-    
+    var dummy_expectedtime = false
     var initSource: String? = nil
     var initDest: String? = nil
     
@@ -275,6 +278,8 @@ class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPi
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
                 self.view.bringSubview(toFront: self.UIPickerView)
                 self.UIPickerView.center.y = 400
+                self.dummy_expectedtime = true
+                self.expectedTime = 0
             }, completion:{finish in
                 
             })
@@ -324,7 +329,7 @@ class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPi
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
             self.UIPickerView.center.y = 1000
         }, completion: {finish in
-            
+            if(self.dummy_expectedtime == false){
              let temp = "\(self.createstringfromdate(date: self.record_date_begin)) \(self.hours.text! as String)\(self.Minute.text! as String)"
             var time = Int(self.getdatefromstring(string: temp).timeIntervalSince1970)
             time = time - self.expectedTime
@@ -334,6 +339,10 @@ class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPi
             self.RemMonth.text = self.getstringfromdate(date: date as Date)
             self.Remhours.text = "\(self.getstringfromdate_hour(date: date as Date)):"
             self.RemMinute.text = self.getstringfromdate_minute(date: date as Date)
+            }
+            else{
+                self.dummy_expectedtime = false
+            }
         })
     }
     
@@ -483,7 +492,8 @@ extension AddSchedule: ScheduleSetLocationProtocol {
         // expected time string
         self.expTimeString = expTimeString
         self.travelMode = travelMode
-        
+        exp_timeLabel.text = "EXP TIME:\(expTimeString)"
+        RouteWay.text = travelMode
         let begin = "\(createstringfromdate(date: record_date_begin)) \(hours.text! as String)\(Minute.text! as String)"
         var time = Int(getdatefromstring(string: begin).timeIntervalSince1970)
         time = time - expectedTime
