@@ -166,9 +166,7 @@ class ScheduleDetail: UIViewController {
         return now
         
     }
-     
-
-   
+    
     @IBAction func getbeginweather(_ sender: Any) {
         
         let myVC = storyboard?.instantiateViewController(withIdentifier: "weatherforecast") as! weatherforecast
