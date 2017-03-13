@@ -68,7 +68,7 @@ class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPi
         Minute.text = "00"
         show_hour.text = "00:"
         show_minute.text = "00"
-        record_date_end = Date()
+        record_date_begin = Date()
         record_date_end = Date()
         setTextField()
         creatday()

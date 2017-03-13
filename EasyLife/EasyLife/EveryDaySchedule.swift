@@ -44,8 +44,17 @@ class EveryDaySchedule: UITableViewController,UIActionSheetDelegate, UpdateViewP
         return 1
         
     }
-    
-    
+    /*
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
+        
+        // Get Cell Label
+        let indexPath = tableView.indexPathForSelectedRow!
+        let currentCell = tableView.cellForRow(at: indexPath)! as! EveryDayScheduleCell
+        
+        
+    }
+    */
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return task.count
