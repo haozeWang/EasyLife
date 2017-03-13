@@ -301,8 +301,14 @@ class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPi
         }, completion: {finish in
             
              let temp = "\(self.createstringfromdate(date: self.record_date_begin)) \(self.hours.text! as String)\(self.Minute.text! as String)"
-             let date = self.getdatefromstring(string: temp) as NSDate?
+            var time = Int(self.getdatefromstring(string: temp).timeIntervalSince1970)
+            time = time - self.expectedTime
             
+            let date = NSDate(timeIntervalSince1970: TimeInterval(time))
+            self.record_date_end = date as Date!
+            self.RemMonth.text = self.getstringfromdate(date: date as Date)
+            self.Remhours.text = "\(self.getstringfromdate_hour(date: date as Date)):"
+            self.RemMinute.text = self.getstringfromdate_minute(date: date as Date)
         })
     }
     
