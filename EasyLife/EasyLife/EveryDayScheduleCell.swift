@@ -15,6 +15,8 @@ class EveryDayScheduleCell: UITableViewCell {
     @IBOutlet weak var fin_time: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        descLabel.clipsToBounds = true
+        descLabel.layer.cornerRadius = 10
         // Initialization code
     }
 
