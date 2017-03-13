@@ -60,6 +60,8 @@ class DirectionViewController: UIViewController, UITabBarDelegate{
     // This scrollView is used to show some detailed information of the current route
     var scrollView: UIScrollView? = nil
     
+    var timeText = "0"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -267,6 +269,7 @@ class DirectionViewController: UIViewController, UITabBarDelegate{
             guard let duration = leg["duration"] as? [String: AnyObject] else { return}
             guard let timeText = duration["text"] as? String,
                 let timeValue = duration["value"] as? Int else { return}
+            self.timeText = timeText
             let timeLabel = UILabel(frame: CGRect(x: 20 + 375 * i, y: 0, width: 200, height: 35))
             timeLabel.text = "Time: \(timeText)"
             timeLabel.backgroundColor = UIColor.clear
@@ -344,7 +347,8 @@ class DirectionViewController: UIViewController, UITabBarDelegate{
                                                                 destLon: destLongitude,
                                                                 sourceName: self.sourceLabel.text!,
                                                                 destName: self.destLabel.text!,
-                                                                expectedTime: selectedRoute.time)
+                                                                expectedTime: selectedRoute.time,
+                                                                expTimeString: self.timeText)
             let presentingViewController = self.presentingViewController
             self.dismiss(animated: true) {
                 presentingViewController?.dismiss(animated: false, completion: nil)
@@ -376,6 +380,7 @@ class DirectionViewController: UIViewController, UITabBarDelegate{
         vc.expectedTime = selectedRoute.time
         vc.initSource = vc.sourceName
         vc.initDest = vc.destName
+        vc.expTimeString = self.timeText
         
         vc.point_begin = "lat=\(sourceLatitude)&lon=\(sourceLongitude)"
         vc.point_end = "lat=\(sourceLatitude)&lon=\(sourceLongitude)"

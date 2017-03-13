@@ -46,6 +46,8 @@ class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPi
     var initSource: String? = nil
     var initDest: String? = nil
     
+    var expTimeString = "0"
+    
     var flag = 1
     var changeflag = 1
     var day : [String] = []
@@ -466,7 +468,7 @@ class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPi
 
 
 extension AddSchedule: ScheduleSetLocationProtocol {
-    func updateLocation(sourceLat: String, sourceLon: String, destLat: String, destLon: String, sourceName: String, destName: String, expectedTime: Int) {
+    func updateLocation(sourceLat: String, sourceLon: String, destLat: String, destLon: String, sourceName: String, destName: String, expectedTime: Int, expTimeString: String) {
         self.sourceLatitude = sourceLat
         self.sourceLongitude = sourceLon
         self.destLatitude = destLat
@@ -476,6 +478,10 @@ extension AddSchedule: ScheduleSetLocationProtocol {
         self.expectedTime = expectedTime
         self.begin_point.text = sourceName
         self.end_point.text = destName
+        
+        // expected time string
+        self.expTimeString = expTimeString
+        
         let begin = "\(createstringfromdate(date: record_date_begin)) \(hours.text! as String)\(Minute.text! as String)"
         var time = Int(getdatefromstring(string: begin).timeIntervalSince1970)
         time = time - expectedTime

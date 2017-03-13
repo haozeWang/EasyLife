@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ScheduleSetLocationProtocol {
-    func updateLocation(sourceLat: String, sourceLon: String, destLat: String, destLon: String, sourceName: String, destName: String, expectedTime: Int)
+    func updateLocation(sourceLat: String, sourceLon: String, destLat: String, destLon: String, sourceName: String, destName: String, expectedTime: Int, expTimeString: String)
 }
