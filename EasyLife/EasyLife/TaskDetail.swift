@@ -72,9 +72,9 @@ class TaskDetail: UIViewController {
                         let weather = responsedate["weather"] as! [AnyObject]
                         
                         let weather_clear = weather[0] as AnyObject
-                        let weather_date = weather_clear["description"] as! String
+                        _ = weather_clear["description"] as! String
                         let main = responsedate["main"] as! [String:AnyObject]
-                        let temperature = main["temp"] as! Int
+                        _ = main["temp"] as! Int
                         let code = weather_clear["icon"] as! String
                         let city = responsedate["name"] as! String
                         self.WeatherImage.image = self.getimage(url: "http://openweathermap.org/img/w/\(code).png")
