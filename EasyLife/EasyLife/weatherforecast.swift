@@ -71,7 +71,7 @@ class weatherforecast: UIViewController,UICollectionViewDataSource,UICollectionV
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         let num = time % 4
         if(num == 0){
-           backgroundImage.image = UIImage(named: "1.jpg")
+           backgroundImage.image = UIImage(named: "2.jpg")
         }
         else if(num == 1){
             backgroundImage.image = UIImage(named: "2.jpg")

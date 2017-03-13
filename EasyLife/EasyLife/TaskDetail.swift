@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SystemConfiguration
 class TaskDetail: UIViewController {
 
     @IBOutlet weak var cityname: UILabel!
@@ -25,8 +25,10 @@ class TaskDetail: UIViewController {
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "taskdetail.jpg")
         self.view.insertSubview(backgroundImage, at: 0)
-        if(task.point_begin == " "){
+        if(!ReachAbility.isInternetAvailable()){
             moreweather.isHidden = true
+            WeatherImage.isHidden = true
+            cityname.isHidden = true
             Rem_time.text = getstringfromdate(date: task.ram_time as Date)
             Fin_time.text = getstringfromdate(date: task.fin_time as Date)
             Desc.text = task.desc
@@ -36,6 +38,8 @@ class TaskDetail: UIViewController {
         }
         else{
             moreweather.isEnabled = true
+            cityname.isEnabled = true
+            Nonetwork.isHidden = true
             point_begin = task.point_begin
             Nonetwork.isHidden = true
             Rem_time.text = getstringfromdate(date: task.ram_time as Date)
@@ -84,6 +88,16 @@ class TaskDetail: UIViewController {
     }
     
     
+   
+    @IBAction func MoreWeather(_ sender: Any) {
+        
+        let myVC = storyboard?.instantiateViewController(withIdentifier: "weatherforecast") as! weatherforecast
+        myVC.location_end = point_begin
+        navigationController?.pushViewController(myVC, animated: true)
+        
+        }
+    
+    
     func getimage(url:String)->UIImage{
         let path = URL(string: url)
         let data = try? Data(contentsOf: path!)
@@ -99,7 +113,7 @@ class TaskDetail: UIViewController {
         return now
         
     }
-
+    
     /*
     // MARK: - Navigation
 
