@@ -573,12 +573,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wBg-3t-suQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-74" y="2087"/>
+            <point key="canvasLocation" x="1625" y="1805"/>
         </scene>
         <!--Schedule Detail-->
         <scene sceneID="UOh-Rb-jEa">
             <objects>
-                <viewController id="FXk-JR-gaj" customClass="ScheduleDetail" customModule="EasyLife" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="scheduledetail" storyboardIdentifier="scheduledetail" id="FXk-JR-gaj" customClass="ScheduleDetail" customModule="EasyLife" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DXa-jr-Vss"/>
                         <viewControllerLayoutGuide type="bottom" id="wey-KL-2mC"/>
@@ -617,14 +617,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HiF-HP-5Bu">
-                                <rect key="frame" x="279" y="300" width="67" height="38"/>
+                                <rect key="frame" x="208" y="300" width="167" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="getendweather:" destination="FXk-JR-gaj" eventType="touchUpInside" id="1pP-sn-IHX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSy-ma-UAY">
-                                <rect key="frame" x="34" y="304" width="69" height="36"/>
+                                <rect key="frame" x="0.0" y="304" width="148" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="getbeginweather:" destination="FXk-JR-gaj" eventType="touchUpInside" id="0fa-9n-8eM"/>
@@ -678,7 +678,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SKx-Id-LTS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1079" y="2087"/>
+            <point key="canvasLocation" x="438" y="1805"/>
         </scene>
         <!--Weatherforecast-->
         <scene sceneID="ilA-KW-eQ4">
@@ -855,7 +855,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xgf-9p-a9J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2004" y="2087"/>
+            <point key="canvasLocation" x="2374" y="2340"/>
         </scene>
         <!--Add Schedule-->
         <scene sceneID="7DB-BV-0HW">
@@ -1177,7 +1177,6 @@
                                 <connections>
                                     <outlet property="fin_time" destination="2lY-vd-MGk" id="yhW-hX-RJW"/>
                                     <outlet property="title" destination="VBD-3Q-MvL" id="9vP-31-4X2"/>
-                                    <segue destination="FXk-JR-gaj" kind="push" identifier="showweather" id="03Y-dg-Vyf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

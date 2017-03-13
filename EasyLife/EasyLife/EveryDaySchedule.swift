@@ -44,17 +44,25 @@ class EveryDaySchedule: UITableViewController,UIActionSheetDelegate, UpdateViewP
         return 1
         
     }
-    /*
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        
         
         // Get Cell Label
         let indexPath = tableView.indexPathForSelectedRow!
         let currentCell = tableView.cellForRow(at: indexPath)! as! EveryDayScheduleCell
-        
+        let controller = storyboard?.instantiateViewController(withIdentifier: "scheduledetail") as! ScheduleDetail
+        let object = task[indexPath.row]
+        controller.point_begin = object.point_begin
+        controller.point_begin = object.point_end
+        controller.location_begin = object.begin
+        controller.location_end = object.end
+        print(object.title)
+        controller.task = object
+        navigationController?.pushViewController(controller, animated: true)
         
     }
-    */
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return task.count
@@ -67,13 +75,14 @@ class EveryDaySchedule: UITableViewController,UIActionSheetDelegate, UpdateViewP
             cell.fin_time.text = createstringfromdate(date: issue.fin_time as Date)
             return cell
     }
+    /*
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print(task[0].title)
         if segue.identifier == "showweather"
         {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                let object = task[0]
+                let object = task[indexPath.row]
                 
                 let controller = segue.destination as! ScheduleDetail
                 controller.point_begin = object.point_begin
@@ -85,6 +94,7 @@ class EveryDaySchedule: UITableViewController,UIActionSheetDelegate, UpdateViewP
             }
         }
     }
+ */
     /*
     func updatadayschedule(){
         tableView.reloadData()
