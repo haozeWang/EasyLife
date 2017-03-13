@@ -8,7 +8,7 @@
 
 import UIKit
 import MapKit
-
+import SystemConfiguration
 
 /// - Attribution: https://www.thorntech.com/2016/01/how-to-search-for-location-using-apples-mapkit/
 class MapViewController: UIViewController {
@@ -96,8 +96,16 @@ class MapViewController: UIViewController {
         // initialize the location manager
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
+        if CLLocationManager.authorizationStatus() != .authorizedWhenInUse &&
+            CLLocationManager.authorizationStatus() != .authorizedAlways {
+            let alert = UIAlertController(title: "Location not permitted", message: "we cannot get information due to no permission to Location", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action) -> Void in
+                self.activity.hidesWhenStopped = true
+                self.activity.stopAnimating()
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
         
         // initialize the bottom view
         initBottomView()
@@ -106,6 +114,16 @@ class MapViewController: UIViewController {
         if fromScheduleVC == false {
             backButton.isHidden = true
             backButton.isUserInteractionEnabled = false
+        }
+        
+        // check internet access
+        // check if network is connected
+        if !ReachAbility.isInternetAvailable() {
+            print("No access to Internet")
+            let alert = UIAlertController(title: "No Access to Internet", message: "we cannot get information due to no access to internet", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action) -> Void in
+            }))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
@@ -181,40 +199,56 @@ class MapViewController: UIViewController {
         var name = self.parseOptionalValue(degree: "\(self.selectedPin?.name)")
         name = name.replacingOccurrences(of: "\"", with: "")
         name = name.replacingOccurrences(of: " ", with: "+")
-        SharedNetworking.networkInstance.googlePlaceSearchResults(latitute: latitude, longitute: longitute, name: name) { (result, success) -> Void in
-            if success == true {
-                DispatchQueue.main.async {
-                    self.bottomView?.isHidden = false
-                    self.locationDetail = result
-                    guard let name = result["name"] as? String,
-                        let address = result["formatted_address"] as? String else  { return}
-                    self.bottomLocationNameLabel?.text = name
-                    self.bottomLocationSubtitleLabel?.text = address
-                    
-                    // icon
-                    guard let iconUrl = result["icon"] as? String else {   return}
-                    
-                    SharedNetworking.networkInstance.downloadImage(urlString: iconUrl){
-                        (imageData, success) -> Void in
-                        if success {
-                            print(2)
-                            DispatchQueue.main.async {
-                                let iconImage = UIImage(data: imageData as Data)
-                                self.bottomImageView!.image = iconImage
+        do {
+            try SharedNetworking.networkInstance.googlePlaceSearchResults(latitute: latitude, longitute: longitute, name: name) { (result, success) -> Void in
+                if success == true {
+                    DispatchQueue.main.async {
+                        self.bottomView?.isHidden = false
+                        self.locationDetail = result
+                        guard let name = result["name"] as? String,
+                            let address = result["formatted_address"] as? String else  { return}
+                        self.bottomLocationNameLabel?.text = name
+                        self.bottomLocationSubtitleLabel?.text = address
+                        
+                        // icon
+                        guard let iconUrl = result["icon"] as? String else {   return}
+                        
+                        do {
+                            try SharedNetworking.networkInstance.downloadImage(urlString: iconUrl){
+                                (imageData, success) -> Void in
+                                if success {
+                                    print(2)
+                                    DispatchQueue.main.async {
+                                        let iconImage = UIImage(data: imageData as Data)
+                                        self.bottomImageView!.image = iconImage
+                                    }
+                                }
                             }
+                        } catch {
+                            print("No access to Internet")
+                            let alert = UIAlertController(title: "No Access to Internet", message: "we cannot get information due to no access to internet", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action) -> Void in
+                            }))
+                            self.present(alert, animated: true, completion: nil)
                         }
                     }
                 }
-            }
-            else{
-                print("false")
-                DispatchQueue.main.async {
-                    self.bottomView?.isHidden = true
+                else{
+                    print("false")
+                    DispatchQueue.main.async {
+                        self.bottomView?.isHidden = true
+                    }
                 }
             }
-            
-            
+        } catch {
+            print("No access to Internet")
+            let alert = UIAlertController(title: "No Access to Internet", message: "we cannot get information due to no access to internet", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action) -> Void in
+            }))
+            self.present(alert, animated: true, completion: nil)
         }
+        
+        
         
     }
     
@@ -238,7 +272,8 @@ extension MapViewController : CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse {
             self.locationManager.requestLocation()
-            
+        } else {
+            print("not allowed")
         }
     }
     

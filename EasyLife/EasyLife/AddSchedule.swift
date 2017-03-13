@@ -164,6 +164,9 @@ class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPi
         self.dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func dismissSchedule(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
 
     

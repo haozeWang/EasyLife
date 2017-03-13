@@ -182,17 +182,27 @@ class DirectionViewController: UIViewController, UITabBarDelegate{
         print(googleMapUrl)
         
         // get the route using google map API
-        SharedNetworking.networkInstance.googleMapDirectionResults(url: googleMapUrl) {
-            (routes, success) -> Void in
-            print("-------------")
-            if routes.count>0 {
-                self.routes = routes
-                DispatchQueue.main.async {
-                    self.updateScrollView()
+        do {
+            try SharedNetworking.networkInstance.googleMapDirectionResults(url: googleMapUrl) {
+                (routes, success) -> Void in
+                print("-------------")
+                if routes.count>0 {
+                    self.routes = routes
+                    DispatchQueue.main.async {
+                        self.updateScrollView()
+                    }
+                    self.drawRoute(routeIndex: 0)
                 }
-                self.drawRoute(routeIndex: 0)
             }
+        } catch {
+            print("No access to Internet")
+            let alert = UIAlertController(title: "No Access to Internet", message: "we cannot get directions due to no access to internet", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action) -> Void in
+                self.dismiss(animated: true, completion: nil)
+            }))
+            self.present(alert, animated: true, completion: nil)
         }
+        
 
     }
  

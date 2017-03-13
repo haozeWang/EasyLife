@@ -15,15 +15,18 @@ class SharedNetworking {
     
     static let networkInstance = SharedNetworking()
     
-    
+    // custom errortype
+    enum networkError: Error {
+        case networkUnavailable
+    }
     
     // search directions using google map api
     /// - Attribution: https://developers.google.com/maps/documentation/directions/intro#traffic-model
-    func googleMapDirectionResults(url: String, completion:@escaping ([AnyObject], Bool) -> Void) {
+    func googleMapDirectionResults(url: String, completion:@escaping ([AnyObject], Bool) -> Void) throws {
         
         // check if network is connected
         if !ReachAbility.isInternetAvailable() {
-            return
+            throw networkError.networkUnavailable
         }
         
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
@@ -124,7 +127,7 @@ class SharedNetworking {
     
     // get detailed information about locations using google places API
     /// - Attribution: https://developers.google.com/places/web-service/details
-    func googlePlaceSearchResults(latitute: String, longitute: String, name: String, completion:@escaping ([String: AnyObject], Bool) -> Void) {
+    func googlePlaceSearchResults(latitute: String, longitute: String, name: String, completion:@escaping ([String: AnyObject], Bool) -> Void) throws{
         
         // initialize the results
         var result = [String: AnyObject]()
@@ -132,7 +135,7 @@ class SharedNetworking {
         
         // check if network is connected
         if !ReachAbility.isInternetAvailable() {
-            return
+            throw networkError.networkUnavailable
         }
         
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
@@ -251,12 +254,15 @@ class SharedNetworking {
                 }
                 
                 // search the detail
-                self.placeDetails(placeID: placeID) { (detailResult, success) -> Void in
-                    result = detailResult
-                    completion(result, success)
-                    
-                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
-                    
+                do{
+                    try self.placeDetails(placeID: placeID) { (detailResult, success) -> Void in
+                        result = detailResult
+                        completion(result, success)
+                        
+                        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                    }
+                } catch {
+                    throw networkError.networkUnavailable
                 }
                 
                 
@@ -276,7 +282,7 @@ class SharedNetworking {
     
     
     // search a detailed place using place id provided by google
-    func placeDetails(placeID: String, completion:@escaping ([String: AnyObject], Bool) -> Void) {
+    func placeDetails(placeID: String, completion:@escaping ([String: AnyObject], Bool) -> Void) throws {
         
         // initialize the results
         var result = [String: AnyObject]()
@@ -284,7 +290,7 @@ class SharedNetworking {
         
         // check if network is connected
         if !ReachAbility.isInternetAvailable() {
-            return
+            throw networkError.networkUnavailable
         }
         
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
@@ -394,11 +400,11 @@ class SharedNetworking {
     
     
     // download Image
-    func downloadImage(urlString: String, completion:@escaping (NSData, Bool) -> Void) {
+    func downloadImage(urlString: String, completion:@escaping (NSData, Bool) -> Void) throws {
         
         // check if network is connected
         if !ReachAbility.isInternetAvailable() {
-            return
+            throw networkError.networkUnavailable
         }
         
         

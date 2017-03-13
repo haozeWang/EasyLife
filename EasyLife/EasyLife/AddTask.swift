@@ -75,10 +75,21 @@ class AddTask: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPicker
         self.view.addGestureRecognizer(myGesture)
         
         // load location
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.requestLocation()
+        
+        if CLLocationManager.authorizationStatus() != .authorizedWhenInUse &&
+            CLLocationManager.authorizationStatus() != .authorizedAlways{
+            print("location not allowed")
+            let alert = UIAlertController(title: "Location not permitted", message: "we cannot get information due to no permission to Location", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action) -> Void in
+                
+            }))
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestLocation()
+        }
+        
     }
     
     func tappedAwayFunction(sender: UITapGestureRecognizer){

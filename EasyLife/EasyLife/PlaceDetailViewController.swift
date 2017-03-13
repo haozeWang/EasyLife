@@ -216,17 +216,25 @@ class PlaceDetailViewController: UIViewController {
     func loadPhoto(photoInfo: [String: AnyObject], photoView: UIImageView) {
         if let photoRef = photoInfo["photo_reference"] as? String {
             let photoUrl = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=125&photoreference=\(photoRef)&key=AIzaSyBIMD_Nulnv7yw4OaKa-rEAqvI3I_hAv4E"
-            SharedNetworking.networkInstance.downloadImage(urlString: photoUrl){
-                (imageData, success) -> Void in
-                if success {
-                    DispatchQueue.main.async {
-                        let photoImage = UIImage(data: imageData as Data)
-                        photoView.image = photoImage
-                        photoView.contentMode = .scaleToFill
-                        photoView.layer.borderWidth = 2.5
-                        photoView.layer.borderColor = UIColor.lightGray.cgColor
+            do {
+                try SharedNetworking.networkInstance.downloadImage(urlString: photoUrl){
+                    (imageData, success) -> Void in
+                    if success {
+                        DispatchQueue.main.async {
+                            let photoImage = UIImage(data: imageData as Data)
+                            photoView.image = photoImage
+                            photoView.contentMode = .scaleToFill
+                            photoView.layer.borderWidth = 2.5
+                            photoView.layer.borderColor = UIColor.lightGray.cgColor
+                        }
                     }
                 }
+            } catch {
+                print("No access to Internet")
+                let alert = UIAlertController(title: "No Access to Internet", message: "we cannot get information due to no access to internet", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action) -> Void in
+                }))
+                self.present(alert, animated: true, completion: nil)
             }
         }
     }
