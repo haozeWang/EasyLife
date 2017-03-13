@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import UserNotifications
 import MapKit
+import SystemConfiguration
 class AddTask: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate{
 
     @IBOutlet weak var UITextLabel: UITextField!
@@ -174,7 +175,7 @@ class AddTask: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPicker
         temp.date = getstringfromdate_yy(date: temp.fin_time as! Date)
         temp.id = "\(Date().timeIntervalSince1970)"
         temp.point_begin = "lat=\(currentLatitude)&lon=\(currentLongitude)"
-        temp.point_end = "lat=\(currentLatitude)&lon=\(currentLongitude)"
+         temp.point_end = "lat=\(currentLatitude)&lon=\(currentLongitude)"
        var sche = schedule()
         sche =  sche.copy(task: temp)
         schedule.scheduleInstance.insertDate(schedule: temp)

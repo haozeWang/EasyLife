@@ -34,7 +34,7 @@ class ScheduleDetail: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "003.jpg")
+        backgroundImage.image = UIImage(named: "taskdetail.jpg")
         self.view.insertSubview(backgroundImage, at: 0)
         self.name.text = task.title
         self.desc.text = task.desc
@@ -103,9 +103,11 @@ class ScheduleDetail: UIViewController {
     }
     
     func loadfurdata(date: NSDate){
-        var time = Int(date.timeIntervalSince1970)
+        var time = Int(task.fin_time.timeIntervalSince1970)
         time = time - 21800
-        print(time)
+        var time_begin = Int(Date().timeIntervalSince1970)
+        time_begin = time_begin - 21800
+        var flag = 1
         url = "http://api.openweathermap.org/data/2.5/forecast?\(point_end)&appid=e5ad7ed727b66d69dc3c323ad8b8fd71"
         print(url)
         SharedNetwork.SharedInstance.grabSomeData(url){(response) -> Void in
@@ -115,7 +117,8 @@ class ScheduleDetail: UIViewController {
                     if let responsedate = response?["list"] as? [AnyObject]
                     {
                         for i in responsedate{
-                            if i["dt"] as! Int > time {
+                            if ((i["dt"] as! Int) < time ||  (i["dt"] as! Int) > time_begin) {
+                                flag = 2
                                 let wea = i["weather"] as! [AnyObject]
                                 let weather_clear = wea[0] as AnyObject
                                 let weather_date = weather_clear["description"] as! String
@@ -137,12 +140,28 @@ class ScheduleDetail: UIViewController {
                                 return
                                 }
                             }
-                            else {
-                                self.information.text = "Nice weather. Enjoying your trip"
-                            }
+                            
                         }
-                        self.information.text = "Nice weather. Enjoying your trip"
+                        if(flag == 2){
+                             self.information.text = "Nice weather "
+                        }
+                        else{
+                            
+                            if self.date_end.weather == "rain" {
+                                self.information.text = "During your trip phase，would be raining. Be careful"
+                                return
+                            }
+                            else if self.date_end.weather == "thunderstorm"{
+                                self.information.text = "During your trip phase，would have thunderstorm. Be careful"
+                                return
+                            }
+                            else if self.date_end.weather == "shower rain" {
+                                self.information.text = "During your trip phase，would have shower rain. Be careful"
+                                return
+                            }
 
+                        }
+                        
                     }
             }
 
