@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tkP-mn-hZR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tkP-mn-hZR">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1288,14 +1288,14 @@
                                     <action selector="dismissSchedule:" destination="M10-wN-fUy" eventType="touchUpInside" id="gkk-YZ-qzF"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ox0-Kx-fQe">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ox0-Kx-fQe">
                                 <rect key="frame" x="8" y="499" width="219" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFN-Mv-MfE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFN-Mv-MfE">
                                 <rect key="frame" x="288" y="499" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1338,7 +1338,7 @@
             </objects>
             <point key="canvasLocation" x="4077.5999999999999" y="1833.7331334332835"/>
         </scene>
-        <!--Every Day Schedule-->
+        <!-- Schedule-->
         <scene sceneID="R70-Jg-Kut">
             <objects>
                 <tableViewController id="65U-SC-ed5" customClass="EveryDaySchedule" customModule="EasyLife" customModuleProvider="target" sceneMemberID="viewController">
@@ -1390,7 +1390,7 @@
                             <outlet property="delegate" destination="65U-SC-ed5" id="eJL-Xw-hdA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="V5n-qG-Jne">
+                    <navigationItem key="navigationItem" title=" Schedule" id="V5n-qG-Jne">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="IoQ-ed-d5J">
                             <connections>
                                 <action selector="AddSchedule:" destination="65U-SC-ed5" id="Tbh-PN-j2N"/>

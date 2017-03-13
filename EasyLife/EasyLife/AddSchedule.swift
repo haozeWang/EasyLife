@@ -63,7 +63,7 @@ class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPi
     override func viewDidLoad() {
         super.viewDidLoad()
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "schedule.jpeg")
+        backgroundImage.image = UIImage(named: "Schedule.jpeg")
         self.view.insertSubview(backgroundImage, at: 0)
         TextField.delegate = self
         YearPickerView.delegate = self
