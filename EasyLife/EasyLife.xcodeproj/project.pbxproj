@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A97D866C1E75D4E300DA12F7 /* ScheduleSetLocationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97D866B1E75D4E300DA12F7 /* ScheduleSetLocationProtocol.swift */; };
+		A9B455011E74969000F0C71D /* MyRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B455001E74969000F0C71D /* MyRoute.swift */; };
+		A9B455031E75107F00F0C71D /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B455021E75107F00F0C71D /* PlaceDetailViewController.swift */; };
+		A9B455061E752FE700F0C71D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9B455041E752FE700F0C71D /* Main.storyboard */; };
+		A9CD78A21E73793D0024F2A1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CD78A11E73793D0024F2A1 /* MapViewController.swift */; };
+		A9CD78A41E7379C90024F2A1 /* LocationSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CD78A31E7379C90024F2A1 /* LocationSearchTableViewController.swift */; };
+		A9CD78A61E7379F70024F2A1 /* MapSearchProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CD78A51E7379F70024F2A1 /* MapSearchProtocol.swift */; };
+		A9CD78A81E737A0E0024F2A1 /* ReachAbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CD78A71E737A0E0024F2A1 /* ReachAbility.swift */; };
+		A9CD78AA1E737A370024F2A1 /* SharedNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CD78A91E737A370024F2A1 /* SharedNetworking.swift */; };
+		A9CD78AC1E737A5F0024F2A1 /* DecodePolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = A9CD78AB1E737A5F0024F2A1 /* DecodePolyline.m */; };
+		A9CD78AF1E7386470024F2A1 /* DirectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CD78AE1E7386470024F2A1 /* DirectionViewController.swift */; };
+		A9CD78B31E73C0940024F2A1 /* SelectLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CD78B21E73C0940024F2A1 /* SelectLocationViewController.swift */; };
+		A9CD78B51E73E0990024F2A1 /* LocationSearchProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CD78B41E73E0990024F2A1 /* LocationSearchProtocol.swift */; };
+		B116CD3F1E74A2D900508FEC /* EveryDaySchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B116CD3E1E74A2D900508FEC /* EveryDaySchedule.swift */; };
+		B116CD411E74AC9700508FEC /* AddTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B116CD401E74AC9700508FEC /* AddTask.swift */; };
+		B116CD5F1E74E8C900508FEC /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B116CD5D1E74E8C900508FEC /* DataModel.xcdatamodeld */; };
+		B116CD691E74EA1F00508FEC /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B116CD681E74EA1F00508FEC /* DataController.swift */; };
+		B116CD6D1E74EE2E00508FEC /* schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B116CD6C1E74EE2E00508FEC /* schedule.swift */; };
+		B116CD771E7509B300508FEC /* EveryDayScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B116CD761E7509B300508FEC /* EveryDayScheduleCell.swift */; };
+		B13AF9821E70AB90001EB206 /* CalanderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13AF9811E70AB90001EB206 /* CalanderViewController.swift */; };
+		B13AF98C1E70BEE7001EB206 /* CalenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13AF98B1E70BEE7001EB206 /* CalenderCell.swift */; };
+		B19709AB1E728BC6002841BF /* 003.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B19709AA1E728BC6002841BF /* 003.jpg */; };
+		B19C97B31E70FE25000CD117 /* SharedNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19C97B21E70FE25000CD117 /* SharedNetwork.swift */; };
+		B19C97B71E71162E000CD117 /* ScheduleDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19C97B61E71162E000CD117 /* ScheduleDetail.swift */; };
+		B1B0894E1E6FBF900089ABB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B0894D1E6FBF900089ABB0 /* AppDelegate.swift */; };
+		B1B089501E6FBF900089ABB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B0894F1E6FBF900089ABB0 /* ViewController.swift */; };
+		B1B089551E6FBF900089ABB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1B089541E6FBF900089ABB0 /* Assets.xcassets */; };
+		B1B089581E6FBF900089ABB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1B089561E6FBF900089ABB0 /* LaunchScreen.storyboard */; };
+		B1B089631E6FBF900089ABB0 /* EasyLifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B089621E6FBF900089ABB0 /* EasyLifeTests.swift */; };
+		B1B39E721E766064005198B2 /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B39E701E766064005198B2 /* Task+CoreDataClass.swift */; };
+		B1B39E731E766064005198B2 /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B39E711E766064005198B2 /* Task+CoreDataProperties.swift */; };
+		B1B39E751E7677F2005198B2 /* schedule.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B1B39E741E7677F2005198B2 /* schedule.jpeg */; };
+		B1E866661E731E8900ED5F09 /* weatherforecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E866651E731E8900ED5F09 /* weatherforecast.swift */; };
+		B1E866681E73213000ED5F09 /* weatherforecastcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E866671E73213000ED5F09 /* weatherforecastcell.swift */; };
+		B1E8666A1E73517700ED5F09 /* weatherforecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E866691E73517700ED5F09 /* weatherforecastTableViewCell.swift */; };
+		B1E8666C1E736A0900ED5F09 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B1E8666B1E736A0900ED5F09 /* 1.jpg */; };
+		B1E866701E736A1100ED5F09 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B1E8666D1E736A1100ED5F09 /* 2.jpg */; };
+		B1E866711E736A1100ED5F09 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B1E8666E1E736A1100ED5F09 /* 3.jpg */; };
+		B1E866721E736A1100ED5F09 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B1E8666F1E736A1100ED5F09 /* 4.jpg */; };
+		B1E866741E73A53100ED5F09 /* AddSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E866731E73A53100ED5F09 /* AddSchedule.swift */; };
+		B1EEA1641E6FF907001116A6 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EEA1631E6FF907001116A6 /* Weather.swift */; };
+		B1FBBF8B1E75CD8B00058B74 /* UpdateViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FBBF8A1E75CD8B00058B74 /* UpdateViewProtocol.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B1B0895F1E6FBF900089ABB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1B089421E6FBF900089ABB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1B089491E6FBF900089ABB0;
+			remoteInfo = EasyLife;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A97D866B1E75D4E300DA12F7 /* ScheduleSetLocationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleSetLocationProtocol.swift; sourceTree = "<group>"; };
+		A9B455001E74969000F0C71D /* MyRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRoute.swift; sourceTree = "<group>"; };
+		A9B455021E75107F00F0C71D /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
+		A9B455051E752FE700F0C71D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A9CD78A11E73793D0024F2A1 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A9CD78A31E7379C90024F2A1 /* LocationSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTableViewController.swift; sourceTree = "<group>"; };
+		A9CD78A51E7379F70024F2A1 /* MapSearchProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapSearchProtocol.swift; sourceTree = "<group>"; };
+		A9CD78A71E737A0E0024F2A1 /* ReachAbility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachAbility.swift; sourceTree = "<group>"; };
+		A9CD78A91E737A370024F2A1 /* SharedNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedNetworking.swift; sourceTree = "<group>"; };
+		A9CD78AB1E737A5F0024F2A1 /* DecodePolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecodePolyline.m; sourceTree = "<group>"; };
+		A9CD78AD1E737AB30024F2A1 /* DecodePolyline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecodePolyline.h; sourceTree = "<group>"; };
+		A9CD78AE1E7386470024F2A1 /* DirectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DirectionViewController.swift; path = ../DirectionViewController.swift; sourceTree = "<group>"; };
+		A9CD78B21E73C0940024F2A1 /* SelectLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectLocationViewController.swift; sourceTree = "<group>"; };
+		A9CD78B41E73E0990024F2A1 /* LocationSearchProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchProtocol.swift; sourceTree = "<group>"; };
+		B116CD3E1E74A2D900508FEC /* EveryDaySchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EveryDaySchedule.swift; sourceTree = "<group>"; };
+		B116CD401E74AC9700508FEC /* AddTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTask.swift; sourceTree = "<group>"; };
+		B116CD5E1E74E8C900508FEC /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		B116CD681E74EA1F00508FEC /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		B116CD6C1E74EE2E00508FEC /* schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = schedule.swift; sourceTree = "<group>"; };
+		B116CD761E7509B300508FEC /* EveryDayScheduleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EveryDayScheduleCell.swift; sourceTree = "<group>"; };
+		B13AF9811E70AB90001EB206 /* CalanderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalanderViewController.swift; path = ../CalanderViewController.swift; sourceTree = "<group>"; };
+		B13AF98B1E70BEE7001EB206 /* CalenderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderCell.swift; sourceTree = "<group>"; };
+		B19709AA1E728BC6002841BF /* 003.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 003.jpg; sourceTree = "<group>"; };
+		B19C97B11E70FA9E000CD117 /* EasyLife-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EasyLife-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		B19C97B21E70FE25000CD117 /* SharedNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedNetwork.swift; sourceTree = "<group>"; };
+		B19C97B61E71162E000CD117 /* ScheduleDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScheduleDetail.swift; path = ../ScheduleDetail.swift; sourceTree = "<group>"; };
+		B1B0894A1E6FBF900089ABB0 /* EasyLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1B0894D1E6FBF900089ABB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B1B0894F1E6FBF900089ABB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B1B089541E6FBF900089ABB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B1B089571E6FBF900089ABB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B1B089591E6FBF900089ABB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1B0895E1E6FBF900089ABB0 /* EasyLifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyLifeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1B089621E6FBF900089ABB0 /* EasyLifeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyLifeTests.swift; sourceTree = "<group>"; };
+		B1B089641E6FBF900089ABB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1B39E701E766064005198B2 /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B1B39E711E766064005198B2 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B1B39E741E7677F2005198B2 /* schedule.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = schedule.jpeg; sourceTree = "<group>"; };
+		B1E866651E731E8900ED5F09 /* weatherforecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = weatherforecast.swift; sourceTree = "<group>"; };
+		B1E866671E73213000ED5F09 /* weatherforecastcell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = weatherforecastcell.swift; sourceTree = "<group>"; };
+		B1E866691E73517700ED5F09 /* weatherforecastTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = weatherforecastTableViewCell.swift; sourceTree = "<group>"; };
+		B1E8666B1E736A0900ED5F09 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		B1E8666D1E736A1100ED5F09 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		B1E8666E1E736A1100ED5F09 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		B1E8666F1E736A1100ED5F09 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		B1E866731E73A53100ED5F09 /* AddSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSchedule.swift; sourceTree = "<group>"; };
+		B1EEA1631E6FF907001116A6 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		B1FBBF8A1E75CD8B00058B74 /* UpdateViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateViewProtocol.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B1B089471E6FBF900089ABB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1B0895B1E6FBF900089ABB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B1B089411E6FBF900089ABB0 = {
+			isa = PBXGroup;
+			children = (
+				B1B39E701E766064005198B2 /* Task+CoreDataClass.swift */,
+				B1B39E711E766064005198B2 /* Task+CoreDataProperties.swift */,
+				B1B0894C1E6FBF900089ABB0 /* EasyLife */,
+				B1B089611E6FBF900089ABB0 /* EasyLifeTests */,
+				B1B0894B1E6FBF900089ABB0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B1B0894B1E6FBF900089ABB0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B1B0894A1E6FBF900089ABB0 /* EasyLife.app */,
+				B1B0895E1E6FBF900089ABB0 /* EasyLifeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B1B0894C1E6FBF900089ABB0 /* EasyLife */ = {
+			isa = PBXGroup;
+			children = (
+				A9B455041E752FE700F0C71D /* Main.storyboard */,
+				B19C97B21E70FE25000CD117 /* SharedNetwork.swift */,
+				B19C97B11E70FA9E000CD117 /* EasyLife-Bridging-Header.h */,
+				B13AF98B1E70BEE7001EB206 /* CalenderCell.swift */,
+				B116CD681E74EA1F00508FEC /* DataController.swift */,
+				B1B0894D1E6FBF900089ABB0 /* AppDelegate.swift */,
+				B1B39E741E7677F2005198B2 /* schedule.jpeg */,
+				B13AF9811E70AB90001EB206 /* CalanderViewController.swift */,
+				B19709AA1E728BC6002841BF /* 003.jpg */,
+				B1B0894F1E6FBF900089ABB0 /* ViewController.swift */,
+				B1E8666D1E736A1100ED5F09 /* 2.jpg */,
+				B1E8666E1E736A1100ED5F09 /* 3.jpg */,
+				B1E8666F1E736A1100ED5F09 /* 4.jpg */,
+				B1E8666B1E736A0900ED5F09 /* 1.jpg */,
+				B116CD761E7509B300508FEC /* EveryDayScheduleCell.swift */,
+				B116CD6C1E74EE2E00508FEC /* schedule.swift */,
+				B116CD5D1E74E8C900508FEC /* DataModel.xcdatamodeld */,
+				B116CD401E74AC9700508FEC /* AddTask.swift */,
+				B1E866731E73A53100ED5F09 /* AddSchedule.swift */,
+				B19C97B61E71162E000CD117 /* ScheduleDetail.swift */,
+				B116CD3E1E74A2D900508FEC /* EveryDaySchedule.swift */,
+				B1E866691E73517700ED5F09 /* weatherforecastTableViewCell.swift */,
+				B1E866671E73213000ED5F09 /* weatherforecastcell.swift */,
+				B1E866651E731E8900ED5F09 /* weatherforecast.swift */,
+				B1EEA1631E6FF907001116A6 /* Weather.swift */,
+				B1B089541E6FBF900089ABB0 /* Assets.xcassets */,
+				B1B089561E6FBF900089ABB0 /* LaunchScreen.storyboard */,
+				B1B089591E6FBF900089ABB0 /* Info.plist */,
+				A9CD78A11E73793D0024F2A1 /* MapViewController.swift */,
+				A9CD78A31E7379C90024F2A1 /* LocationSearchTableViewController.swift */,
+				A9CD78A51E7379F70024F2A1 /* MapSearchProtocol.swift */,
+				A9CD78A71E737A0E0024F2A1 /* ReachAbility.swift */,
+				A9CD78A91E737A370024F2A1 /* SharedNetworking.swift */,
+				A9CD78AB1E737A5F0024F2A1 /* DecodePolyline.m */,
+				A9CD78AD1E737AB30024F2A1 /* DecodePolyline.h */,
+				A9CD78AE1E7386470024F2A1 /* DirectionViewController.swift */,
+				A9B455001E74969000F0C71D /* MyRoute.swift */,
+				A9CD78B21E73C0940024F2A1 /* SelectLocationViewController.swift */,
+				A9CD78B41E73E0990024F2A1 /* LocationSearchProtocol.swift */,
+				B1FBBF8A1E75CD8B00058B74 /* UpdateViewProtocol.swift */,
+				A9B455021E75107F00F0C71D /* PlaceDetailViewController.swift */,
+				A97D866B1E75D4E300DA12F7 /* ScheduleSetLocationProtocol.swift */,
+			);
+			path = EasyLife;
+			sourceTree = "<group>";
+		};
+		B1B089611E6FBF900089ABB0 /* EasyLifeTests */ = {
+			isa = PBXGroup;
+			children = (
+				B1B089621E6FBF900089ABB0 /* EasyLifeTests.swift */,
+				B1B089641E6FBF900089ABB0 /* Info.plist */,
+			);
+			path = EasyLifeTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B1B089491E6FBF900089ABB0 /* EasyLife */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1B089671E6FBF900089ABB0 /* Build configuration list for PBXNativeTarget "EasyLife" */;
+			buildPhases = (
+				B1B089461E6FBF900089ABB0 /* Sources */,
+				B1B089471E6FBF900089ABB0 /* Frameworks */,
+				B1B089481E6FBF900089ABB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasyLife;
+			productName = EasyLife;
+			productReference = B1B0894A1E6FBF900089ABB0 /* EasyLife.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B1B0895D1E6FBF900089ABB0 /* EasyLifeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1B0896A1E6FBF900089ABB0 /* Build configuration list for PBXNativeTarget "EasyLifeTests" */;
+			buildPhases = (
+				B1B0895A1E6FBF900089ABB0 /* Sources */,
+				B1B0895B1E6FBF900089ABB0 /* Frameworks */,
+				B1B0895C1E6FBF900089ABB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1B089601E6FBF900089ABB0 /* PBXTargetDependency */,
+			);
+			name = EasyLifeTests;
+			productName = EasyLifeTests;
+			productReference = B1B0895E1E6FBF900089ABB0 /* EasyLifeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B1B089421E6FBF900089ABB0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				KnownAssetTags = (
+					New,
+				);
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Haoze Wang";
+				TargetAttributes = {
+					B1B089491E6FBF900089ABB0 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Q6C8CX24JZ;
+						ProvisioningStyle = Automatic;
+					};
+					B1B0895D1E6FBF900089ABB0 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B1B089491E6FBF900089ABB0;
+					};
+				};
+			};
+			buildConfigurationList = B1B089451E6FBF900089ABB0 /* Build configuration list for PBXProject "EasyLife" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B1B089411E6FBF900089ABB0;
+			productRefGroup = B1B0894B1E6FBF900089ABB0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B1B089491E6FBF900089ABB0 /* EasyLife */,
+				B1B0895D1E6FBF900089ABB0 /* EasyLifeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B1B089481E6FBF900089ABB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1E866721E736A1100ED5F09 /* 4.jpg in Resources */,
+				B1E866701E736A1100ED5F09 /* 2.jpg in Resources */,
+				B1B089581E6FBF900089ABB0 /* LaunchScreen.storyboard in Resources */,
+				B1B089551E6FBF900089ABB0 /* Assets.xcassets in Resources */,
+				B19709AB1E728BC6002841BF /* 003.jpg in Resources */,
+				B1E866711E736A1100ED5F09 /* 3.jpg in Resources */,
+				A9B455061E752FE700F0C71D /* Main.storyboard in Resources */,
+				B1E8666C1E736A0900ED5F09 /* 1.jpg in Resources */,
+				B1B39E751E7677F2005198B2 /* schedule.jpeg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1B0895C1E6FBF900089ABB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B1B089461E6FBF900089ABB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9CD78A21E73793D0024F2A1 /* MapViewController.swift in Sources */,
+				A9B455011E74969000F0C71D /* MyRoute.swift in Sources */,
+				B116CD771E7509B300508FEC /* EveryDayScheduleCell.swift in Sources */,
+				B116CD5F1E74E8C900508FEC /* DataModel.xcdatamodeld in Sources */,
+				B1E866741E73A53100ED5F09 /* AddSchedule.swift in Sources */,
+				B13AF9821E70AB90001EB206 /* CalanderViewController.swift in Sources */,
+				B1B39E731E766064005198B2 /* Task+CoreDataProperties.swift in Sources */,
+				B1E866681E73213000ED5F09 /* weatherforecastcell.swift in Sources */,
+				A97D866C1E75D4E300DA12F7 /* ScheduleSetLocationProtocol.swift in Sources */,
+				B1B089501E6FBF900089ABB0 /* ViewController.swift in Sources */,
+				A9CD78AA1E737A370024F2A1 /* SharedNetworking.swift in Sources */,
+				A9CD78B31E73C0940024F2A1 /* SelectLocationViewController.swift in Sources */,
+				A9CD78A41E7379C90024F2A1 /* LocationSearchTableViewController.swift in Sources */,
+				B13AF98C1E70BEE7001EB206 /* CalenderCell.swift in Sources */,
+				A9B455031E75107F00F0C71D /* PlaceDetailViewController.swift in Sources */,
+				A9CD78A61E7379F70024F2A1 /* MapSearchProtocol.swift in Sources */,
+				B19C97B31E70FE25000CD117 /* SharedNetwork.swift in Sources */,
+				B1E8666A1E73517700ED5F09 /* weatherforecastTableViewCell.swift in Sources */,
+				B1FBBF8B1E75CD8B00058B74 /* UpdateViewProtocol.swift in Sources */,
+				B19C97B71E71162E000CD117 /* ScheduleDetail.swift in Sources */,
+				B116CD6D1E74EE2E00508FEC /* schedule.swift in Sources */,
+				A9CD78AC1E737A5F0024F2A1 /* DecodePolyline.m in Sources */,
+				A9CD78AF1E7386470024F2A1 /* DirectionViewController.swift in Sources */,
+				B1B39E721E766064005198B2 /* Task+CoreDataClass.swift in Sources */,
+				A9CD78B51E73E0990024F2A1 /* LocationSearchProtocol.swift in Sources */,
+				B116CD411E74AC9700508FEC /* AddTask.swift in Sources */,
+				A9CD78A81E737A0E0024F2A1 /* ReachAbility.swift in Sources */,
+				B1EEA1641E6FF907001116A6 /* Weather.swift in Sources */,
+				B116CD3F1E74A2D900508FEC /* EveryDaySchedule.swift in Sources */,
+				B116CD691E74EA1F00508FEC /* DataController.swift in Sources */,
+				B1B0894E1E6FBF900089ABB0 /* AppDelegate.swift in Sources */,
+				B1E866661E731E8900ED5F09 /* weatherforecast.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1B0895A1E6FBF900089ABB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1B089631E6FBF900089ABB0 /* EasyLifeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B1B089601E6FBF900089ABB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1B089491E6FBF900089ABB0 /* EasyLife */;
+			targetProxy = B1B0895F1E6FBF900089ABB0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A9B455041E752FE700F0C71D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9B455051E752FE700F0C71D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B1B089561E6FBF900089ABB0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1B089571E6FBF900089ABB0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B1B089651E6FBF900089ABB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B1B089661E6FBF900089ABB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B1B089681E6FBF900089ABB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Q6C8CX24JZ;
+				INFOPLIST_FILE = EasyLife/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Haozewang.EasyLife;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EasyLife-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B1B089691E6FBF900089ABB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Q6C8CX24JZ;
+				INFOPLIST_FILE = EasyLife/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Haozewang.EasyLife;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EasyLife-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		B1B0896B1E6FBF900089ABB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = EasyLifeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Haozewang.EasyLifeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyLife.app/EasyLife";
+			};
+			name = Debug;
+		};
+		B1B0896C1E6FBF900089ABB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = EasyLifeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Haozewang.EasyLifeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyLife.app/EasyLife";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B1B089451E6FBF900089ABB0 /* Build configuration list for PBXProject "EasyLife" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1B089651E6FBF900089ABB0 /* Debug */,
+				B1B089661E6FBF900089ABB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1B089671E6FBF900089ABB0 /* Build configuration list for PBXNativeTarget "EasyLife" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1B089681E6FBF900089ABB0 /* Debug */,
+				B1B089691E6FBF900089ABB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1B0896A1E6FBF900089ABB0 /* Build configuration list for PBXNativeTarget "EasyLifeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1B0896B1E6FBF900089ABB0 /* Debug */,
+				B1B0896C1E6FBF900089ABB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B116CD5D1E74E8C900508FEC /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B116CD5E1E74E8C900508FEC /* DataModel.xcdatamodel */,
+			);
+			currentVersion = B116CD5E1E74E8C900508FEC /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B1B089421E6FBF900089ABB0 /* Project object */;
+}
