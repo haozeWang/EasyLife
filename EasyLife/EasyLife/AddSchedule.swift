@@ -503,6 +503,6 @@ extension AddSchedule: ScheduleSetLocationProtocol {
         Remhours.text = "\(getstringfromdate_hour(date: date as Date)):"
         RemMinute.text = getstringfromdate_minute(date: date as Date)
         point_begin = "lat=\(sourceLatitude)&lon=\(sourceLongitude)"
-        point_end = "lat=\(sourceLatitude)&lon=\(sourceLongitude)"
+        point_end = "lat=\(destLatitude)&lon=\(destLongitude)"
     }
 }

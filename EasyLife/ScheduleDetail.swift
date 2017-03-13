@@ -61,9 +61,11 @@ class ScheduleDetail: UIViewController {
         var url: String!
         if(flag == 1){
             url = "http://api.openweathermap.org/data/2.5/weather?\(point_begin)&appid=e5ad7ed727b66d69dc3c323ad8b8fd71"
+            print(url)
         }
         if(flag == 2){
             url = "http://api.openweathermap.org/data/2.5/weather?\(point_end)&appid=e5ad7ed727b66d69dc3c323ad8b8fd71"
+            print(url)
         }
         
         SharedNetwork.SharedInstance.grabSomeData(url){(response) -> Void in
@@ -192,6 +194,7 @@ class ScheduleDetail: UIViewController {
         
         let myVC = storyboard?.instantiateViewController(withIdentifier: "weatherforecast") as! weatherforecast
         myVC.location_end = point_begin
+        print(point_begin)
         navigationController?.pushViewController(myVC, animated: true)
         
     }
@@ -199,6 +202,7 @@ class ScheduleDetail: UIViewController {
     @IBAction func getendweather(_ sender: Any) {
         let myVC = storyboard?.instantiateViewController(withIdentifier: "weatherforecast") as! weatherforecast
         myVC.location_end = point_end
+        print(point_end)
         navigationController?.pushViewController(myVC, animated: true)
     }
     /*

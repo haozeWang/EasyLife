@@ -56,7 +56,10 @@ class EveryDaySchedule: UITableViewController,UIActionSheetDelegate, UpdateViewP
         if(object.begin != " "){
         let controller = storyboard?.instantiateViewController(withIdentifier: "scheduledetail") as! ScheduleDetail
         controller.point_begin = object.point_begin
-        controller.point_begin = object.point_end
+        print("this is veevve")
+        print(object.point_begin)
+        print(object.point_end)
+        controller.point_end = object.point_end
         controller.location_begin = object.begin
         controller.location_end = object.end
         print(object.title)
