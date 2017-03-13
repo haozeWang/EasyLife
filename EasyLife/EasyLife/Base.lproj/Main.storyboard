@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tkP-mn-hZR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tkP-mn-hZR">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -431,7 +431,7 @@
         <scene sceneID="Fzv-ZY-Yad">
             <objects>
                 <navigationController id="irh-XQ-RFe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Schedule" id="hSv-aj-xZg"/>
+                    <tabBarItem key="tabBarItem" title="Schedule" image="schedule" id="hSv-aj-xZg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="etZ-6V-Hls">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -448,7 +448,7 @@
         <scene sceneID="ilH-VB-bd9">
             <objects>
                 <navigationController id="eQh-5e-AEv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Calender" id="9Fb-hj-JMQ"/>
+                    <tabBarItem key="tabBarItem" title="Calender" image="calendar" id="9Fb-hj-JMQ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="P5N-E5-3zc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1576,7 +1576,7 @@
         <scene sceneID="OSD-82-sBM">
             <objects>
                 <navigationController storyboardIdentifier="mapNavigationVC" automaticallyAdjustsScrollViewInsets="NO" id="xbr-Nu-MAR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" id="gJN-up-ack"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" id="gJN-up-ack"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="h1H-qF-nZp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1650,14 +1650,17 @@
         <image name="address" width="24" height="24"/>
         <image name="back" width="128" height="128"/>
         <image name="back2" width="256" height="256"/>
+        <image name="calendar" width="25" height="25"/>
         <image name="cycle" width="25" height="25"/>
         <image name="drive" width="25" height="25"/>
+        <image name="map" width="25" height="25"/>
         <image name="origin" width="24" height="24"/>
         <image name="phone" width="25" height="25"/>
+        <image name="schedule" width="25" height="25"/>
         <image name="transit" width="25" height="25"/>
         <image name="walk" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Oyd-aq-rpc"/>
+        <segue reference="sz1-UY-1eG"/>
     </inferredMetricsTieBreakers>
 </document>
