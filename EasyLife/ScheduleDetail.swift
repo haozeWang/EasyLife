@@ -33,6 +33,7 @@ class ScheduleDetail: UIViewController {
     var url:String!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "schedule_bac1.jpg")
         self.view.insertSubview(backgroundImage, at: 0)
@@ -43,11 +44,22 @@ class ScheduleDetail: UIViewController {
         self.endcityname.setTitle(task.end, for: .normal)
         self.begin_time.text = getstringfromdate_schedule(date: task.fin_time as Date)
         self.ram_time.text = getstringfromdate_schedule(date: task.ram_time as Date)
+        if(ReachAbility.isInternetAvailable()){
+            information.isHidden = false
+            begincityname.isEnabled = true
+            endcityname.isEnabled = true
+            loadcurrdate(flag: 1)
+            loadcurrdate(flag: 2)
+            let date = NSDate()
+            loadfurdata(date:date )
+        }
+        else{
+            information.text = "Oops, We can not connect to the Internet. So we can not display the weather information"
+            begincityname.isEnabled = false
+            endcityname.isEnabled = false
+            
+        }
         
-        loadcurrdate(flag: 1)
-        loadcurrdate(flag: 2)
-        let date = NSDate()
-        loadfurdata(date:date )
         // Do any additional setup after loading the view.
     }
 
