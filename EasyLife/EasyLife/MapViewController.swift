@@ -237,6 +237,12 @@ class MapViewController: UIViewController {
                     print("false")
                     DispatchQueue.main.async {
                         self.bottomView?.isHidden = true
+                        
+                        print("No location detail found!")
+                        let alert = UIAlertController(title: "No location detail found!", message: "we currently have no information about the location", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action) -> Void in
+                        }))
+                        self.present(alert, animated: true, completion: nil)
                     }
                 }
             }

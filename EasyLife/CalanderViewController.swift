@@ -17,11 +17,17 @@ class CalanderViewController: UIViewController,UITableViewDelegate,UICollectionV
     @IBOutlet weak var showLabel: UILabel!
     @IBOutlet weak var TableView: UITableView!
     @IBOutlet weak var CollectionView: UICollectionView!
+    
+    @IBOutlet weak var instructionButton: UIBarButtonItem!
+    
     var date:Date!
     var weekArray:[String] = []
     var rec_month = getstringfromdate_M(date: Date())
     
     let locationManager = CLLocationManager()
+    
+    // instruction view
+    var instructionView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +53,85 @@ class CalanderViewController: UIViewController,UITableViewDelegate,UICollectionV
         // ask for location permission
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
+        
+        self.initInstructionView()
     }
+    
+    
+    func initInstructionView() {
+        
+        // initialize the introduction view
+        instructionView = UIView(frame: CGRect(x: 0, y: 0,
+                                         width: self.view.frame.width,
+                                         height: self.view.frame.height))
+        instructionView.backgroundColor = UIColor.init(white: 1, alpha: 0.9)
+        
+        let introTitle = UILabel(frame: CGRect(x: 100, y: 70, width: 175, height: 40))
+        introTitle.text = "Instructions"
+        introTitle.backgroundColor = UIColor.orange
+        introTitle.textColor = UIColor.white
+        introTitle.textAlignment = .center
+        introTitle.font = UIFont.boldSystemFont(ofSize: 28)
+        introTitle.layer.cornerRadius = 8
+        introTitle.layer.masksToBounds = true
+        instructionView.addSubview(introTitle)
+        
+        // initialize the introduction text
+        let introText = UILabel(frame: CGRect(x: 20, y: 115, width: 335, height: 400))
+        introText.text = "You can use this app to schedule your events. When schedule events, you can choose to either use a map or not. After you made you schedule, you can select a date on the calendar and find your schedules at that day.\n\n You can use the map to select your destination and choose the route you would like to go on to reach the destination. \n\n Taping on a schedule cell shows you more about the schedule, including the weather, the starting point and the destination. \n\n Notifications will be sent to you at the reminder time."
+        introText.numberOfLines = 0
+        introText.font = UIFont(name: (introText.font?.fontName)!, size: 17)
+        introText.textAlignment = NSTextAlignment.center
+        introText.backgroundColor = UIColor.clear
+        instructionView.addSubview(introText)
+        
+    
+        // add a button to dismiss the introduction
+        let introEndButton = UIButton(frame: CGRect(x: 125, y: 530, width: 125, height: 50))
+        introEndButton.backgroundColor = UIColor.init(red: 0, green: 100/255, blue: 200/255, alpha: 1)
+        introEndButton.setTitle("Return", for: .normal)
+        introEndButton.titleLabel!.font = UIFont.boldSystemFont(ofSize: 24)
+        introEndButton.setTitleColor(UIColor.white, for: .normal)
+        introEndButton.addTarget(self, action: #selector(closeInstruction), for: .touchUpInside)
+        instructionView.addSubview(introEndButton)
+
+    }
+    
+    
+    @IBAction func openInstruction(_ sender: Any) {
+        print("open instructions")
+        view.addSubview(self.instructionView)
+        instructionView.center.y = self.view.center.y*(-1)
+        UIView.animate(withDuration: 1.0,
+                       animations: {
+                        self.instructionView.center.y = self.view.center.y
+        },
+                       completion: nil)
+        self.instructionButton.isEnabled = false
+        
+    }
+    
+    
+    // close the instructions
+    func closeInstruction() {
+        print("close instructions")
+        UIView.animate(withDuration: 1.0,
+                       animations: {
+                        self.instructionView.center.y = self.view.center.y*3
+        },
+                       completion: {
+                        (value:Bool)->Void in
+                        self.instructionView.removeFromSuperview()
+                        self.instructionButton.isEnabled = true
+        })
+        
+    }
+    
+    
+    
+    
+    
+    
     
     func setCollectionViewLayout(){
         

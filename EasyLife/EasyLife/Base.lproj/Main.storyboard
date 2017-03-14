@@ -545,9 +545,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Calander" id="gmR-Xk-jZk"/>
-                    <navigationItem key="navigationItem" title="Calander" id="sP3-yg-hwB"/>
+                    <navigationItem key="navigationItem" title="Calander" id="sP3-yg-hwB">
+                        <barButtonItem key="rightBarButtonItem" image="info" id="vyv-BZ-ESd">
+                            <connections>
+                                <action selector="openInstruction:" destination="tCr-89-XYf" id="hHx-CL-YZN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="CollectionView" destination="KH6-Rb-t1E" id="Rz8-cV-CVw"/>
+                        <outlet property="instructionButton" destination="vyv-BZ-ESd" id="y1J-rA-xiU"/>
                         <outlet property="showLabel" destination="AUN-aW-Kvo" id="NpF-tu-8Uv"/>
                     </connections>
                 </viewController>
@@ -1665,6 +1672,7 @@
         <image name="calendar" width="25" height="25"/>
         <image name="cycle" width="25" height="25"/>
         <image name="drive" width="25" height="25"/>
+        <image name="info" width="25" height="25"/>
         <image name="map" width="25" height="25"/>
         <image name="origin" width="24" height="24"/>
         <image name="phone" width="25" height="25"/>
