@@ -13,8 +13,7 @@ import MapKit
 private let reuseIdentifier = "Cell"
 
 class CalanderViewController: UIViewController,UITableViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource {
-
-    @IBOutlet weak var showLabel: UILabel!
+        @IBOutlet weak var showLabel: UILabel!
     @IBOutlet weak var TableView: UITableView!
     @IBOutlet weak var CollectionView: UICollectionView!
     
@@ -31,6 +30,8 @@ class CalanderViewController: UIViewController,UITableViewDelegate,UICollectionV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
         date = Date()
     
         weekArray = ["M","T","W","T","F","S","S"]
@@ -57,6 +58,7 @@ class CalanderViewController: UIViewController,UITableViewDelegate,UICollectionV
         self.initInstructionView()
     }
     
+<<<<<<< Updated upstream
     
     func initInstructionView() {
         
@@ -132,6 +134,9 @@ class CalanderViewController: UIViewController,UITableViewDelegate,UICollectionV
     
     
     
+=======
+   
+>>>>>>> Stashed changes
     
     func setCollectionViewLayout(){
         

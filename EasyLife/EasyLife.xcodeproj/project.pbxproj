@@ -43,6 +43,7 @@
 		B1B6F54B1E77268B00255C2C /* Schedule.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B1B6F54A1E77268B00255C2C /* Schedule.jpeg */; };
 		B1B6F54D1E77690200255C2C /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B1B6F54C1E77690200255C2C /* background.jpg */; };
 		B1B6F5511E776AE300255C2C /* schedule_bac1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B1B6F5501E776AE300255C2C /* schedule_bac1.jpg */; };
+		B1B6F5531E77C08200255C2C /* ShowSplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B6F5521E77C08200255C2C /* ShowSplashScreen.swift */; };
 		B1E866661E731E8900ED5F09 /* weatherforecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E866651E731E8900ED5F09 /* weatherforecast.swift */; };
 		B1E866681E73213000ED5F09 /* weatherforecastcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E866671E73213000ED5F09 /* weatherforecastcell.swift */; };
 		B1E8666A1E73517700ED5F09 /* weatherforecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E866691E73517700ED5F09 /* weatherforecastTableViewCell.swift */; };
@@ -108,6 +109,7 @@
 		B1B6F54A1E77268B00255C2C /* Schedule.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Schedule.jpeg; sourceTree = "<group>"; };
 		B1B6F54C1E77690200255C2C /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		B1B6F5501E776AE300255C2C /* schedule_bac1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = schedule_bac1.jpg; sourceTree = "<group>"; };
+		B1B6F5521E77C08200255C2C /* ShowSplashScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowSplashScreen.swift; sourceTree = "<group>"; };
 		B1E866651E731E8900ED5F09 /* weatherforecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = weatherforecast.swift; sourceTree = "<group>"; };
 		B1E866671E73213000ED5F09 /* weatherforecastcell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = weatherforecastcell.swift; sourceTree = "<group>"; };
 		B1E866691E73517700ED5F09 /* weatherforecastTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = weatherforecastTableViewCell.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				A9B455041E752FE700F0C71D /* Main.storyboard */,
+				B1B6F5521E77C08200255C2C /* ShowSplashScreen.swift */,
 				B19C97B21E70FE25000CD117 /* SharedNetwork.swift */,
 				B19C97B11E70FA9E000CD117 /* EasyLife-Bridging-Header.h */,
 				B13AF98B1E70BEE7001EB206 /* CalenderCell.swift */,
@@ -347,6 +350,7 @@
 				A97D866C1E75D4E300DA12F7 /* ScheduleSetLocationProtocol.swift in Sources */,
 				B1B089501E6FBF900089ABB0 /* ViewController.swift in Sources */,
 				A9CD78AA1E737A370024F2A1 /* SharedNetworking.swift in Sources */,
+				B1B6F5531E77C08200255C2C /* ShowSplashScreen.swift in Sources */,
 				A9CD78B31E73C0940024F2A1 /* SelectLocationViewController.swift in Sources */,
 				A9CD78A41E7379C90024F2A1 /* LocationSearchTableViewController.swift in Sources */,
 				B13AF98C1E70BEE7001EB206 /* CalenderCell.swift in Sources */,
