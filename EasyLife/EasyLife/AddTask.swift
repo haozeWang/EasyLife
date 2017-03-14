@@ -96,7 +96,9 @@ class AddTask: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPicker
     func tappedAwayFunction(sender: UITapGestureRecognizer){
         print(TextField.text)
         temp_view = TextField.text
+        temp_field = UITextLabel.text
         TextField.resignFirstResponder()
+        UITextLabel.resignFirstResponder()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

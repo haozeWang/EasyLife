@@ -62,6 +62,7 @@ class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPi
     var minutes: [String] = ["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60"]
     override func viewDidLoad() {
         super.viewDidLoad()
+      
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "Schedule.jpeg")
         self.view.insertSubview(backgroundImage, at: 0)
@@ -95,8 +96,24 @@ class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPi
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if(!ReachAbility.isInternetAvailable()){
+            print("this it test")
+            let alert = UIAlertController(title: "Error",message:"Please connect to the Internet", preferredStyle:UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok,I know", style: .default, handler: {
+                action in
+                self.dismiss(animated: true, completion: nil)
+                
+            }))
+            
+            self.present(alert, animated: true, completion: nil)
+            
+        }
+    }
+    
     func tappedAwayFunction(sender: UITapGestureRecognizer){
         TextField.resignFirstResponder()
+        UITextLabel.resignFirstResponder()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
