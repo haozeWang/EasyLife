@@ -71,16 +71,16 @@ class weatherforecast: UIViewController,UICollectionViewDataSource,UICollectionV
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         let num = time % 4
         if(num == 0){
-           backgroundImage.image = UIImage(named: "2.jpg")
+           backgroundImage.image = UIImage(named: "background.jpg")
         }
         else if(num == 1){
-            backgroundImage.image = UIImage(named: "2.jpg")
+            backgroundImage.image = UIImage(named: "background.jpg")
         }
         else if(num == 2){
-            backgroundImage.image = UIImage(named: "3.jpg")
+            backgroundImage.image = UIImage(named: "background.jpg")
         }
         else{
-            backgroundImage.image = UIImage(named: "4.jpg")
+            backgroundImage.image = UIImage(named: "background.jpg")
         }
         self.view.insertSubview(backgroundImage, at: 0)
         self.UICollectionView.delegate = self

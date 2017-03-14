@@ -23,7 +23,7 @@ class TaskDetail: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "taskdetail.jpg")
+        backgroundImage.image = UIImage(named: "schedule_bac1.jpg")
         self.view.insertSubview(backgroundImage, at: 0)
         if(!ReachAbility.isInternetAvailable()){
             moreweather.isHidden = true

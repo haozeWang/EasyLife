@@ -34,7 +34,7 @@ class ScheduleDetail: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "taskdetail.jpg")
+        backgroundImage.image = UIImage(named: "schedule_bac1.jpg")
         self.view.insertSubview(backgroundImage, at: 0)
         self.name.text = task.title
         self.desc.text = task.desc
