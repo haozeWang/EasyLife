@@ -97,6 +97,7 @@ class AddTask: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPicker
         print(TextField.text)
         temp_view = TextField.text
         TextField.resignFirstResponder()
+        UITextLabel.resignFirstResponder()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

@@ -113,6 +113,7 @@ class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPi
     
     func tappedAwayFunction(sender: UITapGestureRecognizer){
         TextField.resignFirstResponder()
+        UITextLabel.resignFirstResponder()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
